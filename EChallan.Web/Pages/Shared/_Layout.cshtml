@@ -9,7 +9,8 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+       @* <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" style="color:aqua";>*@
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">EChallan.Web</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -24,8 +25,34 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Manage</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item"
+                                   asp-area="User" asp-controller="ChallaNumberDetails" asp-action="Index">ChallaNumberDetails</a>
+                                <a class="dropdown-item"
+                                   asp-area="User" asp-controller="ChallanDetails" asp-action="Index">ChallanDetails</a>
+                                <a class="dropdown-item"
+                                   asp-area="User" asp-controller="Issues" asp-action="Index">Issues</a>
+                                <a class="dropdown-item"
+                                   asp-area="User" asp-controller="PaymentMethods" asp-action="Index">PaymentMethods</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">User</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item"
+                                   asp-area="User" asp-controller="ChallanDetails" asp-action="Index1">ChallanDetails</a>
+                                @*<a class="dropdown-item"
+                                   asp-area="User" asp-controller="Issues" asp-action="Index1">Issues</a>*@
+                                <a class="dropdown-item"
+                                   asp-area="User" asp-controller="PaymentMethods" asp-action="Index1">PaymentMethods</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
+                @* Inserting the Login Partial View *@
+                <partial name="_LoginPartial" />
             </div>
         </nav>
     </header>
