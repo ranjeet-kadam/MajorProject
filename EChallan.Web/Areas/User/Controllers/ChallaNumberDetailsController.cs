@@ -53,7 +53,7 @@ namespace EChallan.Web.Areas.User.Controllers
             return View(challaNumberDetail);
         }
 
-        [Authorize(Roles = "Appuser")]
+        //[Authorize(Roles = "Appuser")]
         // GET: User/ChallaNumberDetails/Create
         public IActionResult Create()
         {
